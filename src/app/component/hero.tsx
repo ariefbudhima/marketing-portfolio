@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import CTA from './CTA';
 
 const Hero = () => {
   const pathname = usePathname();
@@ -55,22 +56,22 @@ const Hero = () => {
       </div>
 
 
-
+      <CTA/>
       {/* Hero Headline Section */}
-      <div className="HeroHeadline flex flex-col justify-start items-center gap-6 mt-20">
+      {/* <div className="HeroHeadline flex flex-col justify-start items-center gap-6 mt-20">
         <div className="Headline text-center text-black text-6xl font-medium">Boost your sales through <br />email marketing</div>
         <div className="Desc text-center text-slate-500 text-xl font-normal">Acquire customers through SEO, elevate your business with digital <br /> marketing, and generate sales leads</div>
-      </div>
+      </div> */}
 
       {/* Call to Action Buttons */}
-      <div className="CtaList flex flex-col md:flex-row justify-center items-center gap-4 pt-10">
+      {/* <div className="CtaList flex flex-col md:flex-row justify-center items-center gap-4 pt-10">
         <a className="Button px-5 py-3.5 bg-emerald-600 rounded-lg shadow flex items-center justify-center gap-2 hover:bg-emerald-800" href="/chat">
           <div className="Title text-center text-white text-base font-medium leading-snug">Getting started</div>
         </a>
         <a className="Button px-5 py-3.5 bg-slate-50 rounded-lg border border-slate-100 flex items-center justify-center gap-2 hover:bg-slate-200" href='/chat'>
           <div className="Title text-center text-black text-base font-medium leading-snug">Request demo</div>
         </a>
-      </div>
+      </div> */}
 
       {/* Hero Image Section */}
       <div className="flex justify-center mt-10 mx-20">
