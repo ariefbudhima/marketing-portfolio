@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+} */
+
+body {
+  overflow-y: scroll;
+  scrollbar-width: thin; /* For Firefox */
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* styles/globals.css */
+
+/* Scrollbar styling for WebKit browsers */
+::-webkit-scrollbar {
+  width: 8px; /* Adjust the width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker color when hovering over the scrollbar thumb */
+}
+
+/* Hide scrollbar by default and only show on hover */
+.custom-scrollbar {
+  overflow-y: scroll; /* Always show vertical scrollbar */
+}
+
+.custom-scrollbar:hover::-webkit-scrollbar {
+  display: block; /* Show scrollbar on hover */
+}
+

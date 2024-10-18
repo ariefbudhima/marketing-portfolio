@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "5200:3000"
+    environment:
+      NODE_ENV: development
+    volumes:
+      - .:/app
+    command: npm run dev
+    networks:
+      - docu_default
+
+networks:
+  docu_default:
+    driver: bridge
